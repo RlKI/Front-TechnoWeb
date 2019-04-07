@@ -5,7 +5,7 @@
     <mat-card-title>{{artista.name}}</mat-card-title>
     <mat-card-subtitle>{{artista.cathegory.name}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src={{artista.img}} alt="Photo of a Shiba Inu">
+  <img mat-card-image src={{artista.img}} alt={{artista.name}}>
   <mat-card-content>
     <p>{{artista.description}}</p>
   </mat-card-content>
@@ -14,3 +14,5 @@
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>
+
+<button mat-fab color="primary" (click)="openDialog()">+</button>

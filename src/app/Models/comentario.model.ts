@@ -1,6 +1,6 @@
-export class Artista{
-    id:string;
-    idUser:string;
-    idArtista:string;
-    contenido:string;
+export class Artista {
+  id: string;
+  content: string;
+  aritst: string;
+  user: string;
 }

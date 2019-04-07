@@ -1,10 +1,29 @@
 .example-card {
   max-width: 400px;
-  margin: 5px;
+  margin: auto;
   background: whitesmoke;
+  margin-top: 5px;
 }
 
 .example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
   background-size: cover;
+}
+
+.mat-fab {
+  width: 70px;
+  height: 70px;
+  background-color: blue;
+  border-radius: 50%;
+  box-shadow: 0 6px 10px 0 #666;
+  transition: all 0.1s ease-in-out;
+
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
 }

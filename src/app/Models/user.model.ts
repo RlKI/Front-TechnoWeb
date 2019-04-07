@@ -1,6 +1,7 @@
-export class User{
-    id:string;
-    nombre1:string;
-    nombre2:string;
-    urlImage:string;
+export class User {
+  id: string;
+  firstName: string;
+  lastName: string;
+  nickName: string;
+  img: string;
 }

@@ -18,6 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -39,7 +42,10 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     MatCheckboxModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
