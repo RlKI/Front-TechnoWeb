@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UseExistingWebDriver } from 'protractor/built/driverProviders';
+import { User } from 'src/app/Models/user.model';
 
 @Component({
   selector: 'app-perfil',
@@ -11,5 +13,6 @@ export class PerfilComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

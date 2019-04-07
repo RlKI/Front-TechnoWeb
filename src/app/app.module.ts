@@ -16,11 +16,12 @@ import { HttpClientModule } from '@angular/common/http';
 // Material
 // ======================================
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+
 
 
 
@@ -32,8 +33,7 @@ import {MatSelectModule} from '@angular/material/select';
     ArtistasComponent,
     AddArtistaComponent,
     PerfilComponent,
-    AddComentarioComponent,
-
+    AddComentarioComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +41,8 @@ import {MatSelectModule} from '@angular/material/select';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatCardModule,
+    MatInputModule,
     HttpClientModule,
     MatCardModule,
     MatDialogModule,

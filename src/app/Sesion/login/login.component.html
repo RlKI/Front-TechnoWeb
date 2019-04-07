@@ -1,3 +1,13 @@
-<p>
-  login works!
-</p>
+<mat-card class="example-card">
+  <mat-card-header>
+      <mat-card-title style="text-align: center">Logueo</mat-card-title>
+  </mat-card-header>
+  <mat-form-field class="example-80">
+      <input matInput placeholder="Nombre de usuario" [(ngModel)]="user_name">
+  </mat-form-field>
+  <mat-form-field class="example-80">
+      <input matInput placeholder="Contraseña" type="password" [(ngModel)]="user_pass">
+  </mat-form-field>
+
+  <button (click)="logIn()" mat-button color="primary">Logueate</button>
+</mat-card>

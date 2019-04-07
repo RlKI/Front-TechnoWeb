@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/Models/user.model';
 
 @Component({
   selector: 'app-registro',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
+  user: User = new User();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  registroClick(){
+    
   }
 
 }

@@ -8,7 +8,7 @@ export const environment = {
   listarCategorias: 'http://localhost:8080/getAllCathegories',
   crearUsuario: 'http://localhost:8080/addUser',
   listarArtistaId: 'http://localhost:8080/getArtist',
-  listarUsuarioNickPass: 'http://localhost:8080/getUser',
+  getUsuarioNickPass: 'http://localhost:8080/getUser',
   listarComentariosArtista: 'http://localhost:8080/getCommentariesArtist',
   insertarComentario: 'http://localhost:8080/addCommentary',
   insertarArtista: 'http://localhost:8080/addArtist'
