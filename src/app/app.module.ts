@@ -27,13 +27,14 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
     AddArtistaComponent,
     PerfilComponent,
     AddComentarioComponent,
-    MatButtonModule,
-    MatCheckboxModule
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
