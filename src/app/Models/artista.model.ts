@@ -1,7 +1,7 @@
-export class Artista{
-    id:string;
-    nombre:string;
-    descripcion:string;
-    categoria:string;
-    urlImage:string;
+export class Artista {
+  id: string;
+  name: string;
+  description: string;
+  cathegory: string;
+  img: string;
 }

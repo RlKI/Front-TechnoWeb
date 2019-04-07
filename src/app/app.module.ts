@@ -9,12 +9,15 @@ import { ArtistasComponent } from './Home/artistas/artistas.component';
 import { AddArtistaComponent } from './Home/add-artista/add-artista.component';
 import { PerfilComponent } from './Artista/perfil/perfil.component';
 import { AddComentarioComponent } from './Artista/add-comentario/add-comentario.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 // ======================================
 // Material
 // ======================================
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -34,7 +37,9 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
