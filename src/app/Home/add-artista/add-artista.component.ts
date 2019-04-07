@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddArtistaComponent implements OnInit {
 
+  artDescription: string;
+  artImg: string;
+  artName: string;
+  artCathegory: any;
+
   constructor() { }
 
   ngOnInit() {
