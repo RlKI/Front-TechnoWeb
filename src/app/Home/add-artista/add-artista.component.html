@@ -3,11 +3,15 @@
       <input matInput placeholder="Nombre del Artista" [(ngModel)]="artName">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Descripcion" [(ngModel)]="artDescription">
+      <textarea matInput placeholder="Descripcion" [(ngModel)]="artDescription"></textarea>
     </mat-form-field>
     <mat-form-field>
-      <mat-select placeholder="Categoria">
-        <mat-option value="option"></mat-option>
+      <input matInput placeholder="URL Imagen" [(ngModel)]="artImg">
+    </mat-form-field>
+    <mat-form-field >
+      <mat-select placeholder="Categoria" [(ngModel)]="artCathegory">
+        <mat-option *ngFor="let categoria of categorias" [value]="categoria">{{categoria.name}}</mat-option>
       </mat-select>
     </mat-form-field>
+    <button mat-raised-button (click)="addArtista()">Agregar Artista</button>
 </div>

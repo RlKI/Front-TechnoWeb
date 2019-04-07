@@ -1,5 +1,5 @@
 export class Artista {
-  id: string;
+  id?: string;
   name: string;
   description: string;
   cathegory: string;

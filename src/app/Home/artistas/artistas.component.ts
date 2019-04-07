@@ -14,16 +14,20 @@ export class ArtistasComponent implements OnInit {
   artistas: Array<Artista>;
 
   constructor(private homeService: HomeService, private dialog: MatDialog) {
-    homeService.getArtistas().subscribe(resp =>{
-      this.artistas = resp;
-    });
+    this.getAllArtistas();
   }
 
   openDialog() {
     const dialogRef = this.dialog.open(AddArtistaComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      this.getAllArtistas();
+    });
+  }
+
+  getAllArtistas(){
+    this.homeService.getArtistas().subscribe(resp =>{
+      this.artistas = resp;
     });
   }
 
