@@ -10,6 +10,14 @@ import { AddArtistaComponent } from './Home/add-artista/add-artista.component';
 import { PerfilComponent } from './Artista/perfil/perfil.component';
 import { AddComentarioComponent } from './Artista/add-comentario/add-comentario.component';
 
+// ======================================
+// Material
+// ======================================
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +26,14 @@ import { AddComentarioComponent } from './Artista/add-comentario/add-comentario.
     ArtistasComponent,
     AddArtistaComponent,
     PerfilComponent,
-    AddComentarioComponent
+    AddComentarioComponent,
+    MatButtonModule,
+    MatCheckboxModule
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
