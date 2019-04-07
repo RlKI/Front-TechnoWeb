@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/Models/user.model';
 import { SesionService } from 'src/app/Services/sesion.service';
-import { PassThrough } from 'stream';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,16 +21,17 @@ export class LoginComponent implements OnInit {
       this.router.navigateByUrl('/home')
     }
   }
-  
+
 
   logIn() {
     this.sesionService.logIn(this.user_name, this.user_pass).subscribe(resp =>{
       if(resp && resp.id){
         this.user = resp;
         this.sesionService.fillUser(this.user);
+
       }
       else{
-        alert("Credenciales incorrectas");
+        alert('Credenciales incorrectas');
       }
     });
   }

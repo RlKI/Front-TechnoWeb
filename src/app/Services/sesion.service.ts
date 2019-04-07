@@ -28,7 +28,8 @@ export class SesionService {
   public logIn(user_name: string, pass: string): Observable<User> {
     const body = new HttpParams().set('nick', user_name + '')
       .set('pass', pass);
-    return this.http.get<User>(environment.getUsuarioNickPass, { params: body });
+     return this.http.get<User>(environment.getUsuarioNickPass, { params: body });
+
   }
 
   public addUsuario(usuario: User) {

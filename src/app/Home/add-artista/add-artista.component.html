@@ -1,15 +1,13 @@
 <div class="example-container">
-  <mat-form-field>
-    <input matInput placeholder="Input">
-  </mat-form-field>
-
-  <mat-form-field>
-    <textarea matInput placeholder="Textarea"></textarea>
-  </mat-form-field>
-
-  <mat-form-field>
-    <mat-select placeholder="Select">
-      <mat-option value="option">Option</mat-option>
-    </mat-select>
-  </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Nombre del Artista" [(ngModel)]="artName">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Descripcion" [(ngModel)]="artDescription">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Categoria">
+        <mat-option value="option"></mat-option>
+      </mat-select>
+    </mat-form-field>
 </div>
