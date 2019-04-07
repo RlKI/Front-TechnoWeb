@@ -1,3 +1,20 @@
-<p>
-  registro works!
-</p>
+
+<mat-card class="example-card">
+  <mat-card-header>
+      <mat-card-title style="text-align: center">Registro</mat-card-title>
+  </mat-card-header>
+  <mat-form-field class="example-80">
+      <input matInput placeholder="Nombre de usuario" [(ngModel)]="user.nick">
+  </mat-form-field>
+  <mat-form-field class="example-80">
+      <input matInput placeholder="Nombre de usuario" [(ngModel)]="user.nombre1">
+  </mat-form-field>
+  <mat-form-field class="example-80">
+      <input matInput placeholder="Nombre de usuario" [(ngModel)]="user.nombre2">
+  </mat-form-field>
+  <mat-form-field class="example-80">
+      <input matInput placeholder="Contraseña" type="password" [(ngModel)]="user.password">
+  </mat-form-field>
+
+  <button (click)="registroClick()" mat-button color="primary">Registrate</button>
+</mat-card>

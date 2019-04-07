@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/Models/user.model';
+import { SesionService } from 'src/app/Services/sesion.service';
+import { PassThrough } from 'stream';
 
 @Component({
   selector: 'app-login',
@@ -11,8 +13,7 @@ export class LoginComponent implements OnInit {
   user_name: string;
   user_pass: string;
 
-  constructor() {
-    console.log("arroz")
+  constructor(private sesionService: SesionService) {
    }
 
   ngOnInit() {
@@ -20,7 +21,15 @@ export class LoginComponent implements OnInit {
   
 
   logIn() {
-
+    this.sesionService.logIn(this.user_name, this.user_pass).subscribe(resp =>{
+      if(resp && resp.id){
+        this.user = resp;
+        this.sesionService.fillUser(this.user);
+      }
+      else{
+        alert("Credenciales incorrectas");
+      }
+    });
   }
 
 }

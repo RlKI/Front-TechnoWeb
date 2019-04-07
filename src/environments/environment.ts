@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  listarArtistas: 'http://localhost:8080/getAllArtist',
+  listarCategorias: 'http://localhost:8080/getAllCathegories',
+  crearUsuario: 'http://localhost:8080/addUser',
+  listarArtistaId: 'http://localhost:8080/getArtist',
+  getUsuarioNickPass: 'http://localhost:8080/getUser',
+  listarComentariosArtista: 'http://localhost:8080/getCommentariesArtist',
+  insertarComentario: 'http://localhost:8080/addCommentary',
+  insertarArtista: 'http://localhost:8080/addArtist'
 };
 
 /*

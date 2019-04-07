@@ -9,13 +9,14 @@ import { ArtistasComponent } from './Home/artistas/artistas.component';
 import { AddArtistaComponent } from './Home/add-artista/add-artista.component';
 import { PerfilComponent } from './Artista/perfil/perfil.component';
 import { AddComentarioComponent } from './Artista/add-comentario/add-comentario.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 // ======================================
 // Material
 // ======================================
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatCardModule, MatInputModule} from '@angular/material';
-import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 
