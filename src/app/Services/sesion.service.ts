@@ -9,7 +9,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 })
 export class SesionService {
 
-  private user: User = new User();
+  private user: User = null;
   constructor(private http: HttpClient) { }
 
 
@@ -22,7 +22,7 @@ export class SesionService {
   }
 
   logOut() {
-    this.user = new User();
+    this.user = null;
   }
 
   public logIn(user_name: string, pass: string): Observable<User> {
@@ -30,6 +30,15 @@ export class SesionService {
       .set('pass', pass);
      return this.http.get<User>(environment.getUsuarioNickPass, { params: body });
 
+  }
+
+  public addUsuario(usuario: User) {
+    const body = new HttpParams().set('firstName', usuario.firstName + '')
+      .set('lastName', usuario.lastName + '')
+      .set('nickName', usuario.nickName + '')
+      .set('password', usuario.password + '')
+      .set('img', usuario.img);
+    return this.http.post(environment.crearUsuario, body).subscribe();
   }
 
 
