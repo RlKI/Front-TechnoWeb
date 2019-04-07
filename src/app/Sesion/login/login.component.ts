@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/Models/user.model';
 import { SesionService } from 'src/app/Services/sesion.service';
 import { PassThrough } from 'stream';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,10 +14,13 @@ export class LoginComponent implements OnInit {
   user_name: string;
   user_pass: string;
 
-  constructor(private sesionService: SesionService) {
+  constructor(private sesionService: SesionService, private router: Router) {
    }
 
   ngOnInit() {
+    if(this.sesionService.getCurrentUser()){
+      this.router.navigateByUrl('/home')
+    }
   }
   
 
