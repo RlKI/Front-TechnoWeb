@@ -14,7 +14,9 @@ import { AddComentarioComponent } from './Artista/add-comentario/add-comentario.
 // Material
 // ======================================
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatCardModule, MatInputModule} from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -26,15 +28,18 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
     ArtistasComponent,
     AddArtistaComponent,
     PerfilComponent,
-    AddComentarioComponent,
-
+    AddComentarioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatCardModule,
+    MatInputModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

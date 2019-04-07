@@ -1,0 +1,17 @@
+.example-form {
+    min-width: auto;
+    max-width: auto;
+    width: auto;
+  }
+  
+  .example-full-width {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .example-card {
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+  
