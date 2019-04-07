@@ -1,3 +1,30 @@
-<p>
-  perfil works!
-</p>
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{artista.name}}</mat-card-title>
+    <mat-card-subtitle>{{artista.cathegory.name}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src={{artista.img}} alt={{artista.name}}>
+  <mat-card-content>
+    <p>{{artista.description}}</p>
+  </mat-card-content>
+</mat-card>
+
+<div *ngIf="comments.length>0">
+  <mat-card class="example-card" *ngFor="let comment of comments">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{comment.user.nickName}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{comment.content}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<div *ngIf="comments.length==0">
+  No hay comentarios aún
+</div>
+
+<button mat-fab color="primary" (click)="openDialog()">+</button>
