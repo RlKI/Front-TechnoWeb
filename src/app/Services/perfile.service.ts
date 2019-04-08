@@ -14,6 +14,7 @@ export class PerfileService {
 
   public getArtistaById(id: string): Observable<Artista> {
     const body = new HttpParams().set('id', id);
+    console.log(body + '');
     return this.http.get<Artista>(environment.listarArtistaId, { params: body });
   }
 

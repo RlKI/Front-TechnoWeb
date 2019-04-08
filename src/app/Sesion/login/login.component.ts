@@ -17,8 +17,8 @@ export class LoginComponent implements OnInit {
    }
 
   ngOnInit() {
-    if(this.sesionService.getCurrentUser()){
-      this.router.navigateByUrl('/home')
+    if (this.sesionService.getCurrentUser()){
+      this.router.navigateByUrl('/home');
     }
   }
 
@@ -28,9 +28,8 @@ export class LoginComponent implements OnInit {
       if(resp && resp.id){
         this.user = resp;
         this.sesionService.fillUser(this.user);
-
-      }
-      else{
+        this.router.navigateByUrl('/home');
+      } else {
         alert('Credenciales incorrectas');
       }
     });

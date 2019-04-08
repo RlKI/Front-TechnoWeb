@@ -1,1 +1,11 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>{{title}}</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="primary" [routerLink]="['/home']" >Home</button>
+    <button mat-raised-button color="primary" [routerLink]="['/registro']" >Registro</button>
+    <button mat-raised-button color="primary" [routerLink]="['/login']" >Login</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<br>
 <router-outlet></router-outlet>

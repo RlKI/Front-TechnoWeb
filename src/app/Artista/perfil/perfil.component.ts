@@ -13,7 +13,7 @@ import { AddComentarioComponent } from '../add-comentario/add-comentario.compone
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
-  artista: Artista;
+  artista: Artista = new Artista();
   comments: Comentario[] = new Array<Comentario>();
   constructor(private sesionService: SesionService, private perfileService: PerfileService, private router: Router, private route: ActivatedRoute,  private dialog: MatDialog) {
     this.artista.id = this.route.snapshot.params['idArtista'];
@@ -21,7 +21,7 @@ export class PerfilComponent implements OnInit {
 
   ngOnInit() {
     if (!this.sesionService.getCurrentUser()) {
-      this.router.navigateByUrl('/login')
+      this.router.navigateByUrl('/login');
     }
     else {
       this.perfileService.getArtistaById(this.artista.id).subscribe(resp => {

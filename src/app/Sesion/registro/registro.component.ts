@@ -15,7 +15,7 @@ export class RegistroComponent implements OnInit {
 
   ngOnInit() {
     if(this.sesionService.getCurrentUser()){
-      this.router.navigateByUrl('/home')
+      this.router.navigateByUrl('/home');
     }
   }
 
@@ -24,6 +24,7 @@ export class RegistroComponent implements OnInit {
     let validar = this.validarCampos();
     if (validar == "true") {
       this.sesionService.addUsuario(this.user);
+      this.router.navigateByUrl('/login');
     }
     else {
       alert(validar);
@@ -31,16 +32,16 @@ export class RegistroComponent implements OnInit {
   }
 
   validarCampos(): string {
-    if (this.user.nickName = "") {
+    if (this.user.nickName == "") {
       return "Falta NickName";
     }
-    if (this.user.firstName = "") {
+    if (this.user.firstName == "") {
       return "Falta Nombre";
     }
-    if (this.user.lastName = "") {
+    if (this.user.lastName == "") {
       return "Falta Apellido";
     }
-    if (this.user.password = "") {
+    if (this.user.password == "") {
       return "Falta Contraseña";
     }
     return "true";

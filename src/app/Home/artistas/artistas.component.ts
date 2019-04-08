@@ -3,6 +3,8 @@ import { HomeService } from 'src/app/Services/home.service';
 import { Artista } from 'src/app/Models/artista.model';
 import { MatDialog } from '@angular/material';
 import { AddArtistaComponent } from '../add-artista/add-artista.component';
+import { SesionService } from 'src/app/Services/sesion.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-artistas',
@@ -13,7 +15,7 @@ export class ArtistasComponent implements OnInit {
 
   artistas: Array<Artista>;
 
-  constructor(private homeService: HomeService, private dialog: MatDialog) {
+  constructor(private homeService: HomeService, private dialog: MatDialog, private sesionService: SesionService, private router: Router) {
     this.getAllArtistas();
   }
 
@@ -32,6 +34,9 @@ export class ArtistasComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (!this.sesionService.getCurrentUser()) {
+      this.router.navigateByUrl('/login');
+    }
   }
 
 }
